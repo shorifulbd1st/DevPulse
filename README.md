@@ -7,7 +7,7 @@ A secure and scalable **Issue & Feature Tracking REST API** built with **Node.js
 ## 🔗 Live Demo
 
 - **Live API:** https://dev-pulse-shoriful1.vercel.app/
-- **GitHub Repository:** https://github.com/your-username/devpulse-api
+- **GitHub Repository:** https://github.com/shorifulbd1st/DevPulse
 
 > Replace the links above with your actual deployment and repository URL.
 
@@ -47,8 +47,8 @@ A secure and scalable **Issue & Feature Tracking REST API** built with **Node.js
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/devpulse-api.git
-cd devpulse-api
+git clone https://github.com/shorifulbd1st/DevPulse.git
+cd DevPulse
 ```
 
 ### Install dependencies
@@ -154,7 +154,7 @@ src/
 
 ## 🚀 Deployment
 
-- **Backend:** Vercel / Render / Railway
+- **Backend:** Vercel
 - **Database:** Neon PostgreSQL
 
 ---
