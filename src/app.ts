@@ -31,5 +31,9 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api/auth", authRouter)
 app.use("/api/issues", issuesRouter)
+
+
 app.use(globalErrorHandler)
 export default app;
+
+
