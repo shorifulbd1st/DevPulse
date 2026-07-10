@@ -139,12 +139,62 @@ const updateIssueIntoDB = async (issueId: number, payload: Partial<IIssue>, user
       if (issue.reporter_id !== user.id) {
       throw new Error("You can update only your own issue");
     }
+    if (issue.status !== "open") {
+      throw new Error("Only open issues can be updated");
+    }
   }
-}
+  const { title, description, type } = payload;
+   const result = await pool.query(
+    `
+    UPDATE issues
 
+    SET
+      title = COALESCE($1, title),
+      description = COALESCE($2, description),
+      type = COALESCE($3, type),
+      updated_at = NOW()
+
+    WHERE id = $4
+
+    RETURNING *
+    `,
+    [
+      title,
+      description,
+      type,
+      issueId,
+    ]
+  );
+  return result.rows[0];
+
+}
+const deleteIssueFromDB = async (issueId: number, user: any) => {
+    if (user.role !== "maintainer") {
+    throw new Error("Only maintainer can delete issues.");
+  }
+   const issueResult = await pool.query(
+    `
+    SELECT *
+    FROM issues
+    WHERE id = $1
+    `,
+    [issueId]
+  );
+   if (issueResult.rows.length === 0) {
+    throw new Error("Issue not found");
+  }
+  await pool.query(
+    `
+    DELETE FROM issues
+    WHERE id = $1
+    `,
+    [issueId]
+  );
+}
 export const issueService = {
   createIssueIntoDB,
   getALLIssueFromDB,
   getSingleIssueFromDB,
-  updateIssueIntoDB
+  updateIssueIntoDB,
+deleteIssueFromDB
 };
