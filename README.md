@@ -6,7 +6,7 @@ A secure and scalable **Issue & Feature Tracking REST API** built with **Node.js
 
 ## 🔗 Live Demo
 
-- **Live API:** https://your-live-url.com
+- **Live API:** https://dev-pulse-shoriful1.vercel.app/
 - **GitHub Repository:** https://github.com/your-username/devpulse-api
 
 > Replace the links above with your actual deployment and repository URL.
@@ -161,10 +161,5 @@ src/
 
 ## 👨‍💻 Author
 
-**Shafiq Islam**
+**Shoriful Islam**
 
----
-
-## 📄 License
-
-This project was developed for the **Programming Hero Level-2 Backend Assignment** and is intended for educational purposes.
