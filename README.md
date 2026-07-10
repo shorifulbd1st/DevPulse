@@ -6,7 +6,7 @@ A secure and scalable **Issue & Feature Tracking REST API** built with **Node.js
 
 ## 🔗 Live Demo
 
-- **Live API:** https://dev-pulse-shoriful1.vercel.app/
+- **Live API:** https://dev-pulse-seven-flax.vercel.app/
 - **GitHub Repository:** https://github.com/shorifulbd1st/DevPulse
 
 > Replace the links above with your actual deployment and repository URL.
